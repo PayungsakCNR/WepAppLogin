@@ -1,0 +1,20 @@
+//Admin user
+use admin
+db.createUser(
+  {
+    user: "pao",
+    pwd: "Payungsak009!",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
+
+use db-name 
+
+db.createUser(
+  {
+    user: "webapp",
+    pwd: "webapp1234",
+    roles: [ { role: "readWrite", db: "web-app-proj" } ]
+  }
+)
+
